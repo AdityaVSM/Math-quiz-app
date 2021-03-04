@@ -77,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playAgain(View view){
+        b0.setEnabled(true);
+        b1.setEnabled(true);
+        b2.setEnabled(true);
+        b3.setEnabled(true);
         playAgainButton = (Button)findViewById(R.id.playAgainButton);
         score = 0;
         numberOfQuestions = 0;
@@ -96,6 +100,10 @@ public class MainActivity extends AppCompatActivity {
             public void onFinish() {
                 resultTextView.setText("DONE!");
                 playAgainButton.setVisibility(View.VISIBLE);
+                b0.setEnabled(false);
+                b1.setEnabled(false);
+                b2.setEnabled(false);
+                b3.setEnabled(false);
             }
         }.start();
 
